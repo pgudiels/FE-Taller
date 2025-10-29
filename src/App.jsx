@@ -46,7 +46,7 @@ export default function App() {
       <div className="header">
         <div>
           <h1 className="h1">FE-Taller</h1>
-          <p className="p">UI simple para consumir el BE y usar en Jenkins/Sonar/Postman/carga</p>
+          <p className="p">Pablo José Gudiel Sandoval 0900-18-1477</p>
         </div>
         <span className="badge">API: {import.meta.env.VITE_API_BASE_URL}</span>
       </div>
