@@ -1,0 +1,16 @@
+name: FE CI
+on:
+  push:
+    branches: [ main, DEV, QA, PROD ]
+  pull_request:
+    branches: [ main, DEV, QA, PROD ]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci || npm install
+      - run: npm run build
