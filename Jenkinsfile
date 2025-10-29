@@ -40,13 +40,13 @@ pipeline {
     stage('SonarQube') {
       steps {
         withSonarQubeEnv('My SonarQube') {
-          bat """
+          bat '''
             "C:\\Sonarscanner\\bin\\sonar-scanner.bat" ^
               -Dsonar.projectKey=fe-taller ^
-              -Dsonar.projectName=\\"FE Taller\\" ^
+              -Dsonar.projectName="FE Taller" ^
               -Dsonar.sources=src ^
               -Dsonar.exclusions=**/node_modules/**,dist/**,**/*.test.*,**/*.spec.*,**/vite.config.*
-          """
+          '''
         }
       }
     }
